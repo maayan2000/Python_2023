@@ -5,10 +5,15 @@ Created on Fri Mar 24 10:41:40 2023
 @author: efrat
 """
 
+# The assignment was not clear, so I assumed:
+#  1. If the function received Int it will return "Error: parameters should be float",
+#  2. In any other situation that the fuction didn't receive only Float numbers - it will return NONE.
+#  3. If all the numbers are Float - it will make sure that the denominator is not zero, and return the desired answer
+
 def my_func(x1,x2,x3):
     if not isinstance(x1, float) or not isinstance(x2, float) or not isinstance(x3, float):
         if type(x1) == int or type(x2) == int or type(x3) == int:
-            print ("Error: parameters should be float")
+            return ("Error: parameters should be float")
         else:
             return None
  
@@ -21,6 +26,4 @@ def my_func(x1,x2,x3):
             value = numerator/denominator 
             return value
 
-print(my_func(0.0,5.0,8))
-#print(type(my_func(0.0,5.0,1.0)))
-
+print(my_func(0.0,5.5, "gfdgd"))
