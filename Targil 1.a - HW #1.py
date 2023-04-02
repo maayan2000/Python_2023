@@ -13,7 +13,7 @@ Created on Fri Mar 24 10:41:40 2023
 def my_func(x1,x2,x3):
     if not isinstance(x1, float) or not isinstance(x2, float) or not isinstance(x3, float):
         if type(x1) == int or type(x2) == int or type(x3) == int:
-            return ("Error: parameters should be float")
+            print("Error: parameters should be float")
         else:
             return None
  
@@ -26,4 +26,4 @@ def my_func(x1,x2,x3):
             value = numerator/denominator 
             return value
 
-print(my_func(0.0,5.5, "gfdgd"))
+print(my_func(0.0,2.0,"hhh"))
